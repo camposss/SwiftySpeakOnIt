@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     
     @IBAction func onStopRecording(_ sender: UIButton) {
         audioEngine.reset()
+        audioEngine.inputNode.removeTap(onBus: 0)
+
     }
     
     
@@ -39,7 +41,6 @@ class ViewController: UIViewController {
         let request = SFSpeechAudioBufferRecognitionRequest()
 
         let node = audioEngine.inputNode
-        node.removeTap(onBus: 0)
         let recordingFormat = node.outputFormat(forBus: 0)
         node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) {buffer, _ in
             request.append(buffer)

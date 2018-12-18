@@ -12,6 +12,8 @@
 		FF68B1F421C597FA00A5433A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF68B1F221C597FA00A5433A /* Main.storyboard */; };
 		FF68B1F621C597FC00A5433A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF68B1F521C597FC00A5433A /* Assets.xcassets */; };
 		FF68B1F921C597FC00A5433A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF68B1F721C597FC00A5433A /* LaunchScreen.storyboard */; };
+		FF89853121C93DC500419F02 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89853021C93DC500419F02 /* RegisterViewController.swift */; };
+		FF94AC1A21C9372E006BB755 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF94AC1921C9372E006BB755 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FF68B1F521C597FC00A5433A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF68B1F821C597FC00A5433A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF68B1FA21C597FC00A5433A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF89853021C93DC500419F02 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FF94AC1921C9372E006BB755 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +58,11 @@
 		FF68B1ED21C597FA00A5433A /* SpeakOnIt */ = {
 			isa = PBXGroup;
 			children = (
+				FF94AC1921C9372E006BB755 /* LoginViewController.swift */,
 				FF68B1EE21C597FA00A5433A /* AppDelegate.swift */,
 				FF68B1F021C597FA00A5433A /* ViewController.swift */,
 				FF68B1F221C597FA00A5433A /* Main.storyboard */,
+				FF89853021C93DC500419F02 /* RegisterViewController.swift */,
 				FF68B1F521C597FC00A5433A /* Assets.xcassets */,
 				FF68B1F721C597FC00A5433A /* LaunchScreen.storyboard */,
 				FF68B1FA21C597FC00A5433A /* Info.plist */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF94AC1A21C9372E006BB755 /* LoginViewController.swift in Sources */,
 				FF68B1F121C597FA00A5433A /* ViewController.swift in Sources */,
 				FF68B1EF21C597FA00A5433A /* AppDelegate.swift in Sources */,
+				FF89853121C93DC500419F02 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
