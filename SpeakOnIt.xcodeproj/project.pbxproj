@@ -15,6 +15,8 @@
 		FF89853121C93DC500419F02 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89853021C93DC500419F02 /* RegisterViewController.swift */; };
 		FF89853321CA8AD600419F02 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89853221CA8AD600419F02 /* NotesTableViewController.swift */; };
 		FF94AC1A21C9372E006BB755 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF94AC1921C9372E006BB755 /* LoginViewController.swift */; };
+		FFEDA99121CC95B000E6EF40 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEDA99021CC95B000E6EF40 /* Note.swift */; };
+		FFEDA99421CCA6CB00E6EF40 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEDA99321CCA6CB00E6EF40 /* NoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		FF89853021C93DC500419F02 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FF89853221CA8AD600419F02 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		FF94AC1921C9372E006BB755 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FFEDA99021CC95B000E6EF40 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		FFEDA99321CCA6CB00E6EF40 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +64,43 @@
 		FF68B1ED21C597FA00A5433A /* SpeakOnIt */ = {
 			isa = PBXGroup;
 			children = (
-				FF94AC1921C9372E006BB755 /* LoginViewController.swift */,
 				FF68B1EE21C597FA00A5433A /* AppDelegate.swift */,
-				FF68B1F021C597FA00A5433A /* ViewController.swift */,
-				FF68B1F221C597FA00A5433A /* Main.storyboard */,
-				FF89853221CA8AD600419F02 /* NotesTableViewController.swift */,
-				FF89853021C93DC500419F02 /* RegisterViewController.swift */,
+				FFEDA99521CCB06F00E6EF40 /* Controllers */,
+				FFEDA99221CC95B900E6EF40 /* Models */,
+				FFEDA98F21CC958A00E6EF40 /* Views */,
 				FF68B1F521C597FC00A5433A /* Assets.xcassets */,
 				FF68B1F721C597FC00A5433A /* LaunchScreen.storyboard */,
 				FF68B1FA21C597FC00A5433A /* Info.plist */,
 			);
 			path = SpeakOnIt;
+			sourceTree = "<group>";
+		};
+		FFEDA98F21CC958A00E6EF40 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF68B1F221C597FA00A5433A /* Main.storyboard */,
+				FFEDA99321CCA6CB00E6EF40 /* NoteTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FFEDA99221CC95B900E6EF40 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FFEDA99021CC95B000E6EF40 /* Note.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FFEDA99521CCB06F00E6EF40 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF94AC1921C9372E006BB755 /* LoginViewController.swift */,
+				FF89853021C93DC500419F02 /* RegisterViewController.swift */,
+				FF68B1F021C597FA00A5433A /* ViewController.swift */,
+				FF89853221CA8AD600419F02 /* NotesTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF94AC1A21C9372E006BB755 /* LoginViewController.swift in Sources */,
+				FFEDA99121CC95B000E6EF40 /* Note.swift in Sources */,
 				FF68B1F121C597FA00A5433A /* ViewController.swift in Sources */,
 				FF68B1EF21C597FA00A5433A /* AppDelegate.swift in Sources */,
 				FF89853121C93DC500419F02 /* RegisterViewController.swift in Sources */,
+				FFEDA99421CCA6CB00E6EF40 /* NoteTableViewCell.swift in Sources */,
 				FF89853321CA8AD600419F02 /* NotesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

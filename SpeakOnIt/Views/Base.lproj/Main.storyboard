@@ -19,13 +19,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TestCell" id="Y6o-jg-7tr">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteTableViewCell" rowHeight="80" id="Y6o-jg-7tr" customClass="NoteTableViewCell" customModule="SpeakOnIt" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y6o-jg-7tr" id="ThO-TA-ke0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAu-Ao-Dck">
+                                            <rect key="frame" x="16" y="11" width="342.5" height="25.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFz-R8-Klj">
+                                            <rect key="frame" x="16" y="48" width="131" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="eFI-l2-95K"/>
+                                                <constraint firstAttribute="width" constant="131" id="nJD-OC-5Oe"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xp3-9P-Mlr">
+                                            <rect key="frame" x="165" y="48" width="194" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yFz-R8-Klj" firstAttribute="bottom" secondItem="ThO-TA-ke0" secondAttribute="bottomMargin" id="1yD-Of-PHb"/>
+                                        <constraint firstItem="Xp3-9P-Mlr" firstAttribute="bottom" secondItem="ThO-TA-ke0" secondAttribute="bottomMargin" id="2Hw-Lf-7MC"/>
+                                        <constraint firstItem="oAu-Ao-Dck" firstAttribute="leading" secondItem="ThO-TA-ke0" secondAttribute="leadingMargin" id="6sA-au-skv"/>
+                                        <constraint firstItem="yFz-R8-Klj" firstAttribute="top" secondItem="oAu-Ao-Dck" secondAttribute="bottom" constant="11.5" id="8vx-Ul-WNt"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="oAu-Ao-Dck" secondAttribute="trailing" constant="0.5" id="DlO-YZ-yoP"/>
+                                        <constraint firstItem="yFz-R8-Klj" firstAttribute="leading" secondItem="ThO-TA-ke0" secondAttribute="leadingMargin" id="lBk-VE-jzG"/>
+                                        <constraint firstItem="Xp3-9P-Mlr" firstAttribute="leading" secondItem="yFz-R8-Klj" secondAttribute="trailing" constant="18" id="mpM-cF-y23"/>
+                                        <constraint firstItem="Xp3-9P-Mlr" firstAttribute="trailing" secondItem="ThO-TA-ke0" secondAttribute="trailingMargin" id="pTG-dA-qLP"/>
+                                        <constraint firstItem="oAu-Ao-Dck" firstAttribute="top" secondItem="ThO-TA-ke0" secondAttribute="topMargin" id="xf3-DM-mNI"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="noteDateLabel" destination="yFz-R8-Klj" id="tWr-S9-5uM"/>
+                                    <outlet property="noteDescriptionLabel" destination="Xp3-9P-Mlr" id="oQh-dt-b8c"/>
+                                    <outlet property="noteTitleLabel" destination="oAu-Ao-Dck" id="8U0-zb-C6T"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,7 +77,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffm-BJ-PGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-606" y="576"/>
+            <point key="canvasLocation" x="-607.20000000000005" y="575.26236881559225"/>
         </scene>
         <!--Settings-->
         <scene sceneID="nMD-93-OJT">
@@ -152,7 +192,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Lus-l5-YrV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Goc-Tz-sh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nxG-Zx-3hV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LQQ-DV-6Ln">
@@ -166,6 +205,7 @@
                         <segue destination="BSs-Mo-AqV" kind="relationship" relationship="viewControllers" id="IGj-rl-APo"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Goc-Tz-sh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="118" y="-238"/>
         </scene>

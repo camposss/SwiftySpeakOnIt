@@ -9,10 +9,20 @@
 import UIKit
 
 class NotesTableViewController: UITableViewController {
-
-    let testArray: [String] =  ["Note 1", "Note 2", "Note 3", "Note 4", "Note 5"]
+    
+    var notesArray = [Note]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        let note1 = Note(title: "Get groceries", dateCreated: Date(), description: "Make sure to pick up those groceris")
+        let note2 = Note(title: "Study Swift", dateCreated: Date(), description: "Don't forget all those algorithms")
+        let note3 = Note(title: "Make munk happy!", dateCreated: Date(), description: "Always keep munkey happy :)")
+        
+        notesArray += [note1, note2, note3]
+        
+        print(notesArray)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -30,16 +40,21 @@ class NotesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return testArray.count
+        return notesArray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell", for: indexPath)
-        let item = testArray[indexPath.row]
-        cell.textLabel?.text = item
+        let cellIdentifier = "NoteTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? NoteTableViewCell else {
+            fatalError("Dequed cell not an instance of \(cellIdentifier)")
+        }
         
-        // Configure the cell...
+        let note = notesArray[indexPath.row]
+        cell.noteTitleLabel.text = note.title
+        cell.noteDateLabel.text = Date().toString(dateFormat: "MM/dd/yyyy HH:mm:ss")
+        cell.noteDescriptionLabel.text = note.description
+        
 
         return cell
     }
@@ -90,4 +105,14 @@ class NotesTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension Date
+{
+    func toString( dateFormat format  : String ) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
 }
