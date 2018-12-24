@@ -58,7 +58,7 @@ class NotesTableViewController: UITableViewController {
 
         return cell
     }
- 
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -95,15 +95,24 @@ class NotesTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
+    
+    //MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let destinationVC = segue.destination as! NoteDetailViewController
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.selectedNote = notesArray[indexPath.row]
+        }
     }
-    */
+    
+    //MARK: - Perform Segue
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "noteDetailViewSegue", sender: self)
+    }
 
 }
 
