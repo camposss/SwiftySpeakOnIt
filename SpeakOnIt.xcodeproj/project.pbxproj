@@ -17,6 +17,7 @@
 		FF94AC1A21C9372E006BB755 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF94AC1921C9372E006BB755 /* LoginViewController.swift */; };
 		FFEDA99121CC95B000E6EF40 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEDA99021CC95B000E6EF40 /* Note.swift */; };
 		FFEDA99421CCA6CB00E6EF40 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEDA99321CCA6CB00E6EF40 /* NoteTableViewCell.swift */; };
+		FFEDA99721D16C5A00E6EF40 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEDA99621D16C5A00E6EF40 /* NoteDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FF94AC1921C9372E006BB755 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FFEDA99021CC95B000E6EF40 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		FFEDA99321CCA6CB00E6EF40 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		FFEDA99621D16C5A00E6EF40 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				FF89853021C93DC500419F02 /* RegisterViewController.swift */,
 				FF68B1F021C597FA00A5433A /* ViewController.swift */,
 				FF89853221CA8AD600419F02 /* NotesTableViewController.swift */,
+				FFEDA99621D16C5A00E6EF40 /* NoteDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF94AC1A21C9372E006BB755 /* LoginViewController.swift in Sources */,
+				FFEDA99721D16C5A00E6EF40 /* NoteDetailViewController.swift in Sources */,
 				FFEDA99121CC95B000E6EF40 /* Note.swift in Sources */,
 				FF68B1F121C597FA00A5433A /* ViewController.swift in Sources */,
 				FF68B1EF21C597FA00A5433A /* AppDelegate.swift in Sources */,
